@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator</title>
+	<style type="text/css">
+		.h1{
+			 text-align: center;
+			 margin-right:280px;
+			 padding-top: 50px;
+			 font-family: bolder;
+			 transition-duration: 1s;
+			
+		}
+		
+		.calc{
+			background-color: white;
+			height: 470px;
+			width: 290px;
+			margin: 10% 30%;
+			margin-top: 20px;
+			border-radius: 20px;
+			padding: 20px;
+			border: double;
+			border-color: black;
+		}
+
+		input{
+			width: 60px;
+			height: 60px;
+			background-color: black;
+			color: white;
+			border: none;
+			border-radius: 15px;
+			margin: 4px;
+			font-weight: bolder;
+			transition-duration: 0.5s;
+			padding-top: 20px;
+			margin-top: 8px;
+			font-size: 20px;
+			font-style: revert;
+
+
+		}
+		.oprator{
+			background-color: orange;
+
+		}
+		.ac{
+			width: 125px;
+			margin-left: 8px;
+			background-color: gray !important;
+			
+
+		}
+		.op{
+			height: 70px;
+			width: 260px;
+			background-color: transparent;
+			color: black;
+			margin-top: 5px;
+			margin-left: 10px;
+			text-align: right;
+		}
+		#allclear
+		{
+			background-color: orange;
+
+		}
+		.oprator:hover
+		{
+			transform: scale(0.9);
+		}
+		input[type="button"]:hover
+		{
+			transform:scale(0.9);
+			box-shadow: 0px 0px 5px orange;
+			color: red;
+		
+		}
+		.bd{
+			/*background-image: url("https://i.gifer.com/origin/64/647040910feebf23ecb28f47872d91a1.gif");*/
+			/*background-repeat: no-repeat;*/
+			/*background-size: cover;*/
+			background-color: powderblue;
+		}
+		.h1:hover{
+			transform:scale(0.9);
+			text-decoration: underline;
+			color: darkblue;
+			-webkit-text-stroke: 1px black;
+		}
+
+
+	</style>
+</head>
+<body class="bd" >
+	<h1 class="h1">CALCULATOR</h1>
+	<div class="calc">
+
+		<form>
+			<div>
+				<input type="text" name="op"  disabled class="op">
+			</div>
+			<div>
+				<input type="button" value="AC" onclick="op.value=''" class="ac" id="allclear">
+				<input type="button" value="c" onclick="op.value+=''"  style="background-color: gray;">
+				<input type="button" value="%" onclick="op.value+='%'" class="oprator">
+			</div>
+			<div>
+				<input type="button" value="7"onclick="op.value+='7'">
+				<input type="button" value="8"onclick="op.value+='8'">
+				<input type="button" value="9"onclick="op.value+='9'">
+				<input type="button" value="+"onclick="op.value+='+'" class="oprator">
+			</div>
+			<div>
+				<input type="button" value="4"onclick="op.value+='4'">
+				<input type="button" value="5"onclick="op.value+='5'">
+				<input type="button" value="6"onclick="op.value+='6'">
+				<input type="button" value="-"onclick="op.value+='-'" class="oprator">
+			</div>
+			<div>
+				<input type="button" value="1"onclick="op.value+='1'">
+				<input type="button" value="2"onclick="op.value+='2'">
+				<input type="button" value="3"onclick="op.value+='3'">
+				<input type="button" value="*"onclick="op.value+='*'" class="oprator">
+			</div>
+			<div>
+				<input type="button" value="."onclick="op.value+='.'" style="font-weight: bold;">
+				<input type="button" value="0"onclick="op.value+='0'">
+				<input type="button" value="="onclick="op.value=eval(op.value)" style="background-color:green; color: black;" >
+				<input type="button" value="/"onclick="op.value+='/'" class="oprator" >
+			</div>
+		</form>
+		
+	</div>
+
+</body>
+</html>
